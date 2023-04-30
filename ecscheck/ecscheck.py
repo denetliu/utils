@@ -30,9 +30,9 @@ def check_ecs_support(domain, dns_server, client_subnet):
         ecs_supported = any(isinstance(option, dns.edns.ECSOption) for option in response.options)
 
         if ecs_supported:
-            print("DNS {dns_server} 伺服器支持 ECS。")
+            print("DNS 伺服器支持 ECS。")
         else:
-            print("DNS {dns_server} 伺服器不支持 ECS。")
+            print("DNS 伺服器不支持 ECS。")
 
     except Exception as e:
         print(f"查詢過程中出現錯誤: {e}")
